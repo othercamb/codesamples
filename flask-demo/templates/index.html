@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen | Premium Experience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <nav class="navbar">
+        <div class="logo">NextGen<span class="dot">.</span></div>
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Company</a>
+        </div>
+        <a href="#" class="btn-primary small">Get Started</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">New Release v2.0</span>
+            <h1>The Future is <br><span class="gradient-text">Here & Now</span></h1>
+            <p>Experience the next evolution of digital interaction. Seamless, powerful, and beautifully designed.</p>
+            <div class="cta-group">
+                <a href="#" class="btn-primary">Start Building</a>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="card glass-card float">
+                <div class="card-icon">✨</div>
+                <h3>Innovation</h3>
+                <p>Pushing boundaries.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us</h2>
+        <div class="grid">
+            {% for feature in features %}
+            <div class="feature-card">
+                <div class="icon">{{ feature.icon }}</div>
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NextGen Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
