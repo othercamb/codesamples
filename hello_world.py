@@ -23,6 +23,7 @@ def main():
     print("=" * 50)
     
     # Basic greeting
+    # test # 2
     print(greet())
     
     # Greet with a custom name
