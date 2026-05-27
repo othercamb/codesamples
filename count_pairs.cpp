@@ -81,8 +81,8 @@ int main() {
     // --- Demo 3: Full enumeration of all pairs ---
     auto pairs = enumerate_pairs(low, high);
     std::cout << "All pairs:\n";
-    for (auto [a, b] : pairs) {  // structured binding (C++17) unpacks each pair
-        std::cout << "  (" << a << ", " << b << ")\n";
+    for (auto& p : pairs) {
+        std::cout << "  (" << p.first << ", " << p.second << ")\n";
     }
 
     return 0;
